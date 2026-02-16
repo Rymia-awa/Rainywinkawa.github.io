@@ -17,15 +17,20 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            color: var(--text-main);
-            line-height: 1.6;
-            scroll-behavior: smooth;
-            background-image: url('Background.PNG'); 
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-        }
+            background: #000; /* 视频加载前显示黑色 */
+    
+}
+
+        /* 2. 设置视频全屏固定 */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            z-index: -1;       /* 置于最底层 */
+}
 
         /* 磨砂玻璃通用样式 */
         .glass-panel {
@@ -45,8 +50,8 @@
             transform: translateX(-50%);
             z-index: 1000;
             display: flex;
-            gap: 8px;
-            padding: 8px;
+            gap: 18px;
+            padding: 12px;
         }
 
         nav a {
@@ -59,7 +64,24 @@
             transition: var(--transition);
         }
 
-        nav a:hover { background: rgba(255,255,255,0.5); color: var(--primary); }
+        nav a:hover { 
+            background: rgba(255,255,255,0.5);
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                width:85%;
+                left:50%;
+                flex-direction: row; 
+                gap: 8px; 
+                padding: 8px; 
+            }
+            nav a {
+                font-size: 16px; 
+                padding: 8px 16px; 
+            }
+        }
 
         section {
             padding: 140px 10% 80px;
@@ -199,13 +221,17 @@
             section { padding: 100px 5% 40px; }
             .gif-buddy { width: 150px !important; }
         }
-}
+
     </style>
 </head>
 <body>
 
+    <video autoplay muted loop playsinline id="bg-video">
+    <source src="R2.mp4" type="video/mp4">
+    您的浏览器不支持 HTML5 视频。
+   </video>
     <nav class="glass-panel">
-        <a href="#home">关于</a>
+        <a href="#home">关于个人</a>
         <a href="#inventory">库存下载</a>
         <a href="#feedback">留言反馈</a>
     </nav>
@@ -235,7 +261,7 @@
                         <br>
                         个人信息</strong><br>
                         🎓 在校学生<br>
-                        ⏰ 在线时间：09:30 - 12:30 | 18:25 - 00:10<br>
+                        ⏰ 在线时间: 09:30 - 12:30 | 18:25 - 00:10<br>
                         📧 邮箱：<a href="mailto:deliriuminferno13@gmail.com" style="color: var(--primary);">deliriuminferno13@gmail.com</a><br>
                         🎮 带上我可以提高你的游戏难度<br>
                         ⚠️ 该页面仍在改进中！<br>
@@ -270,9 +296,9 @@
                 <div>
                     <div class="file-type" style="background: #f59e0b;">CODE</div>
                     <h3>Github 仓库</h3>
-                    <p style="font-size: 13px; color: #64748b; margin-top: 8px;">存放练习写的 C 语言代码。</p>
+                    <p style="font-size: 13px; color: #64748b; margin-top: 8px;">存放练习写的 C 语言（或者其他）代码。</p>
                 </div>
-                <a href="#" class="btn-download">查看代码</a>
+                <a href="https://github.com" target="_blank" class="btn-download">查看代码</a>
             </div>
         </div>
     </section>
@@ -293,7 +319,7 @@
         <div class="glass-panel footer-glass">
             <div class="footer-links">
                 <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://stackoverflow.com" target="_blank"><i class="fab fa-stack-overflow"></i> Stack Overflow</a>
+                <a href="https://steamcommunity.com/id/Rymia_awa/" target="_blank"><i class="fa fa-steam"></i> Steam</a>
                 <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a>
                 <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="mailto:deliriuminferno13@gmail.com"><i class="fas fa-envelope"></i> 联系我</a>
