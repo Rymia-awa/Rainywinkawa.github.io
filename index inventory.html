@@ -244,34 +244,38 @@
        z-index: 999;
        pointer-events: none;
     ">
-
-    <section id="home">
-        <div class="profile-container" id="trigger">
-            <div id="profile-card" class="profile-card glass-panel">
-                <img src="Rymia.png" alt="Rymia" class="avatar">
-                <h2>Rymia</h2>
-                <p style="color: #64748b; font-size: 0.9rem;">小萌新</p>
-            </div>
-            
-            <div style="flex: 1;">
-                <div class="glass-panel" style="padding: 40px; margin-bottom: 20px;">
-                    <h1 style="margin-bottom: 20px;">欢迎来到我的个人主页</h1>
-                    <p style="line-height: 2;">
-                        <strong>
-                        <br>
-                        个人信息</strong><br>
-                        🎓 在校学生<br>
-                        ⏰ 在线时间: 09:30 - 12:30 | 18:25 - 00:10<br>
-                        📧 邮箱：<a href="mailto:deliriuminferno13@gmail.com" style="color: var(--primary);">deliriuminferno13@gmail.com</a><br>
-                        🎮 带上我可以提高你的游戏难度<br>
-                        ⚠️ 该页面仍在改进中！<br>
-                    </p>
+   <section id="inventory">
+        <h2 style="text-align:center; margin-bottom: 40px; color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">📦 资源库存</h2>
+        <div class="resource-grid">
+            <div class="resource-item glass-panel">
+                <div>
+                    <div class="file-type">LINK</div>
+                    <h3>Steam 个人页</h3>
+                    <p style="font-size: 13px; color: #64748b; margin-top: 8px;">来看看我的游戏库。</p>
                 </div>
+                <a href="https://steamcommunity.com/id/Rymia_awa/" target="_blank" class="btn-download">前往主页</a>
+            </div>
+
+            <div class="resource-item glass-panel">
+                <div>
+                    <div class="file-type" style="background: #10b981;">ZIP</div>
+                    <h3>工具库</h3>
+                    <p style="font-size: 13px; color: #64748b; margin-top: 8px;">一些常用软件安装包和插件。</p>
+                </div>
+                <a href="#" class="btn-download">暂无资源</a>
+            </div>
+
+            <div class="resource-item glass-panel">
+                <div>
+                    <div class="file-type" style="background: #f59e0b;">CODE</div>
+                    <h3>Github 仓库</h3>
+                    <p style="font-size: 13px; color: #64748b; margin-top: 8px;">存放练习写的 C 语言（或者其他）代码。</p>
+                </div>
+                <a href="https://github.com" target="_blank" class="btn-download">查看代码</a>
             </div>
         </div>
     </section>
 
-    
     <footer id="more-links">
         <div class="glass-panel footer-glass">
             <div class="footer-links">
@@ -288,6 +292,7 @@
     </footer>
 
     <script>
+        // 导航栏固定
         const card = document.getElementById('profile-card');
         const trigger = document.getElementById('trigger');
 
