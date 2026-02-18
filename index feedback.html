@@ -244,8 +244,7 @@
        z-index: 999;
        pointer-events: none;
     ">
-
-    <section id="feedback">
+   <section id="feedback">
         <div class="contact-form glass-panel">
             <h2 style="text-align:center; margin-bottom: 30px;">建立联络</h2>
             <form id="contactForm">
@@ -273,6 +272,7 @@
     </footer>
 
     <script>
+        // 导航栏固定
         const card = document.getElementById('profile-card');
         const trigger = document.getElementById('trigger');
 
@@ -292,15 +292,24 @@
             this.reset();
         });
 
-        // 平滑滚动增强（可选）
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
+        // 平滑滚动增强：仅针对当前页面的锚点跳转
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+
+        // 本页内跳转
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const targetElement = document.querySelector(href);
+            if (targetElement) {
+                targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
-            });
-        });
+            }
+        }
+        // 如果不是以 # 开头则不拦截，让浏览器正常跳转
+    });
+});
     </script>
 </body>
 </html>
