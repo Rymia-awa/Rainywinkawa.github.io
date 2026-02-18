@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rymia | Personal Profile</title>
@@ -16,12 +16,19 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
+        /* 背景图片*/
         body {
-            background: #000; /* 视频加载前显示黑色 */
-    
+            background-image: url("R2_bg.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height :100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            z-index:-2;   
 }
 
-        /* 2. 设置视频全屏固定 */
+
+        /*设置视频全屏固定 */
         #bg-video {
             position: fixed;
             top: 0;
@@ -152,7 +159,7 @@
             align-items: center;
             justify-content: center;
             font-weight: 800;
-            font-size: 10px;
+            font-size: 25px;
             margin-bottom: 20px;
         }
 
@@ -249,7 +256,7 @@
         <div class="resource-grid">
             <div class="resource-item glass-panel">
                 <div>
-                    <div class="file-type">LINK</div>
+                    <div class="file-type" style="background: #1e51b9;"><i class="fab fa fa-steam"></i></div>
                     <h3>Steam 个人页</h3>
                     <p style="font-size: 13px; color: #64748b; margin-top: 8px;">来看看我的游戏库。</p>
                 </div>
@@ -258,16 +265,16 @@
 
             <div class="resource-item glass-panel">
                 <div>
-                    <div class="file-type" style="background: #10b981;">ZIP</div>
+                    <div class="file-type" style="background: #d9b607;"><i class="far fa-file-archive"></i></div>
                     <h3>工具库</h3>
-                    <p style="font-size: 13px; color: #64748b; margin-top: 8px;">一些常用软件安装包和插件。</p>
+                    <p style="font-size: 13px; color: #64748b; margin-top: 8px;">一些软件安装包和插件。</p>
                 </div>
                 <a href="#" class="btn-download">暂无资源</a>
             </div>
 
             <div class="resource-item glass-panel">
                 <div>
-                    <div class="file-type" style="background: #f59e0b;">CODE</div>
+                    <div class="file-type" style="background: #000000;"><i class="fab fa-github"></i></div>
                     <h3>Github 仓库</h3>
                     <p style="font-size: 13px; color: #64748b; margin-top: 8px;">存放练习写的 C 语言（或者其他）代码。</p>
                 </div>
@@ -281,7 +288,7 @@
             <div class="footer-links">
                 <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://steamcommunity.com/id/Rymia_awa/" target="_blank"><i class="fab fa fa-steam"></i> Steam</a>
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a>
+                <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter & X</a>
                 <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="mailto:deliriuminferno13@gmail.com"><i class="fas fa-envelope"></i> 联系我</a>
             </div>

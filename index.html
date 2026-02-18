@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rymia | Personal Profile</title>
@@ -16,20 +16,19 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        
+        /* 背景图片*/
         body {
             background-image: url("R2_bg.png");
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
+            min-height :100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            position: fixed;
-            width:100%;
-            height:100%;
-            z-index:-2;
-    
+            z-index:-2;   
 }
 
-        /* 2. 设置视频全屏固定 */
+
+        /* 设置视频全屏固定 */
         #bg-video {
             position: fixed;
             top: 0;
@@ -267,7 +266,7 @@
                     <p style="line-height: 2;">
                         <strong>
                         <br>
-                        个人信息</strong><br>
+                        <i class="fa fa-address-card"></i>个人信息</strong><br>
                         🎓 在校学生<br>
                         ⏰ 在线时间: 09:30 - 12:30 | 18:25 - 00:10<br>
                         📧 邮箱：<a href="mailto:deliriuminferno13@gmail.com" style="color: var(--primary);">deliriuminferno13@gmail.com</a><br>
@@ -285,14 +284,14 @@
             <div class="footer-links">
                 <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://steamcommunity.com/id/Rymia_awa/" target="_blank"><i class="fab fa fa-steam"></i> Steam</a>
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a>
+                <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter & X</a>
                 <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="mailto:deliriuminferno13@gmail.com"><i class="fas fa-envelope"></i> 联系我</a>
             </div>
             <div class="copyright">
                 <p>© 2026 哈基米之家 | 摆烂一天</p>
             </div>
-        </div>
+        </div>v
     </footer>
 
     <script>
